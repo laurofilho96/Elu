@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;1,800&display=swap" rel="stylesheet">
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+  </head>
+  <body>
+    <div class="left">
+
+      <!--Início-->
+      <div class="tabcontent" id="inicio">
+        <div class="titles">
+          <h1>Olá</h1>
+          <h2>Gostaríamos de lhe apresentar o Elu.</h2>
+        </div>
+        <div class="textos">
+          <p>
+            O Elu é uma plataforma de compartilhamento de informações e boas
+            práticas de empresas que buscam tornam seus ambientes de trabalho mais
+            diverso e saudável para pessoas de diferentes contextos e necessidades.
+          </p>
+        </div>
+      </div>
+      <!--FIM do Início-->
+
+      <!--O que é o Elu-->
+      <div class="tabcontent" id="oque">
+        <div class="titles">
+          <h1>Então, sem mais delongas...</h1>
+          <h2>O que é o Elu?</h2>
+        </div>
+        <div class="textos">
+          <p> 
+            O Elu é um aplicativo onde você pode criar Elus, formados por pessoas que
+            conhecem o dia-a-dia das minorias, pois fazem parte delas.
+            Estes Elus são criadores de conteúdo que visam informar e educar o público interno e 
+            externo à empresa sobre a importância da diversidade e de fazer o ambiente de trabalho
+            não-tóxico e inclusivo para colegas negros, mulheres, LGBTQIA+, portadores de necessidades especiais e outros.
+          </p>
+        </div>
+      </div>
+      <!--FIM do O que é o Elu-->
+
+      <!--Pra quem é o Elu-->
+      <div class="tabcontent" id="publico">
+        <div class="titles">
+          <h1>"E para quem é o Elu?" Vocês nos perguntam</h1>
+          <h2>"É para todos vocês" Nós respondemos</h2>
+        </div>
+        <div class="textos">
+          <p> 
+            O conteúdo vem de dentro de empresas com colaboradores que estão engajados
+            em fazer ambientes de trabalho dentro e fora de suas empresas mais saudáveis e inclusivos.
+            Todos podem acessar o conteúdo, reagir e compartilhar informação que pode
+            transformar a vida de milhões de pessoas!
+          </p>
+        </div>
+      </div>
+      <!--FIM do Pra quem é o Elu-->
+
+      <!--Quem somos-->
+      <div class="tabcontent" id="nos">
+        <div class="titles">
+          <h1>Quem somos?</h1>
+        </div>
+        <div class="textos">
+          <p>
+            Somos um grupo de jovens que acredita que informação e não fechar os olhos para falta de diversidade nas empresas e nas lideranças,
+            pode mudar para melhor o futuro de quem é marginalizado pela sociedade.
+            Dar voz às pessoas que quebraram barreiras e se colocaram no mercado de trabalho é uma importante ferramenta para que as minorias
+            se sintam representadas e ouvidas.
+          </p>
+        </div>
+      </div>
+      <!--FIM do Quem somos-->
+
+      <!--Contato-->
+      <div class="tabcontent" id="contato">
+        <div class="titles">
+          <h1>Quer Bater um papo conosco?</h1>
+          <h2>Nos manda um zap ou email, nós respondemos :)</h2>
+        </div>
+        <div class="textos">
+          <p>Venha fazer parte do Elu!</p>
+        </div>
+      </div>
+      <!--FIM do Contato-->
+
+    </div>
+
+    <div class="right">
+      <img src="iphone-mask.png" alt="mascara" class="cel">
+    </div>
+
+      <div class="menu">
+        <ul>
+          <li class="tablink" onclick="openOption(event, 'inicio')" id="defaultOpen"> <a href="#">Início</a></li>
+          <li class="tablink" onclick="openOption(event, 'oque')" ><a href="#">O que é o Elu</a></li>
+          <li class="tablink" onclick="openOption(event, 'publico')"><a href="#">Pra quem é o Elu</a></li>
+          <li class="tablink" onclick="openOption(event, 'nos')"><a href="#">Quem somos</a></li>
+          <li class="tablink" onclick="openOption(event, 'contato')"><a href="#">Contato</a></li>
+        </ul>
+      </div>
+
+      <style>
+        a:hover{
+
+          color: #7000F1;
+        }
+
+        @media screen and (max-width:700px){
+
+          ul, li, a {
+
+            background-color: rgba(0, 0, 0, 0);
+          }
+        }
+      </style>
+
+    <script>
+
+      document.getElementById("defaultOpen").click();
+
+      function openOption(evt, tabName) {
+        // Declare all variables
+        var i, tabcontent, tablink;
+
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablink = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablink.length; i++) {
+          tablink[i].className = tablink[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+        }
+    </script>
+
+  </body>
+</html>

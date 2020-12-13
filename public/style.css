@@ -1,0 +1,190 @@
+/*Alterações em todo o site no geral*/
+* {
+
+  font-family: 'Montserrat', sans-serif;
+  margin:0;
+  padding: 0;
+  color:#EDE3FC;
+
+  background-color: #191919;
+}
+
+a:hover {
+
+  color:#7000F1;
+}
+
+/*Configs do body*/
+
+body {
+
+  margin: 0;
+  padding: 0;
+}
+/*-----------------------------------*/
+
+/*Dividindo a página em dois lados*/
+.left, .right {
+
+  width: 50%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+
+}
+
+.left {
+
+  padding-bottom: 20%;
+}
+
+.right {
+
+  padding-bottom: 7%;
+}
+
+/*Quando a largura da tela for até 700px:*/
+@media screen and (max-width:700px){
+
+  .left, .right {
+
+    /*as classes utilizam a largura total da página e seu tamanho máximo é 500px*/
+    width: 100%;
+    max-height: 500px;
+  }
+
+
+}
+/*-----------------------------------*/
+
+/*Corpo elementos textuais do site:
+  Titles: títulos da página;
+  textos: textos da página;
+*/
+
+.titles{
+
+  padding-top: 15%;
+  padding-left: 15%
+}
+
+.textos {
+  font-size: 20px;
+
+  padding-top: 2%;
+  padding-left: 20%
+}
+
+/*Comportamento dos títulos e textos na tela reduzida*/
+@media screen and (max-width:700px){
+
+  .titles{
+
+    padding-top: 15%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .textos {
+
+    font-size: 15px;
+
+    padding-top: 2%;
+    padding-left: 10%;
+    padding-right:10%;
+  }
+
+}
+
+/*Celular - Aonde aparecerá as telas do app*/
+
+.cel {
+
+  width: auto;
+  height: auto;
+  max-height: 600px;
+
+  padding-right: 10%;
+
+  float: right;
+  display: block;
+}
+
+/*Celular Na tela do celular*/
+@media screen and (max-width:700px){
+
+  .cel{
+
+    width:auto;
+    height:auto;
+    max-height: 400px;
+
+    padding-right: 25%;
+  }
+
+}
+/*-----------------------------------*/
+
+/*Menu da página (Encontrado em baixo )*/
+ul {
+
+  padding: 10px;
+  position: fixed;
+  bottom:0;
+  width: 100%;
+  text-align: center;
+}
+
+li {
+
+  display: inline;
+  font-weight: 600;
+
+}
+
+li a {
+  color: white;
+  display: inline-block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/**/
+.tabcontent {
+
+  display: none;
+  border-top: none;
+}
+
+.tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+  }
+
+  /* Go from zero to full opacity */
+  @keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@media screen and (max-width:700px) {
+
+  ul {
+    position: fixed;
+    bottom:0;
+    width: 100%;
+  }
+
+  li {
+    font-weight: 300;
+    font-size: 12px;
+  }
+
+  li a {
+
+    padding: 3px;
+    text-align: center;
+
+  }
+
+}
