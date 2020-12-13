@@ -10,8 +10,12 @@
 }
 
 a:hover {
+  color:#a557ff;
+}
 
-  color:#7000F1;
+.active {
+  font-weight: bolder;
+  font-size: larger;
 }
 
 /*Configs do body*/
@@ -123,6 +127,7 @@ body {
   }
 
 }
+
 /*-----------------------------------*/
 
 /*Menu da página (Encontrado em baixo )*/
