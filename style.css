@@ -18,6 +18,13 @@ a:hover {
   font-size: larger;
 }
 
+b {
+
+  background: -webkit-linear-gradient(#7000F1, #A557FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /*Configs do body*/
 
 body {
@@ -25,11 +32,42 @@ body {
   margin: 0;
   padding: 0;
 }
+
+header {
+
+  width: 100%;
+  min-height: 150px;
+  max-height: 500px;
+  position:fixed;
+  background-color: rgba(0, 0, 0, 0);
+}
+.logoImg {
+
+  float: left;
+  width: 20%;
+  max-height: 150px;
+  margin-left: 50px;
+}
+
+#logoInit {
+
+
+  padding-left: 23.5%;
+}
+
+#textInit {
+
+  padding: 0px;
+  font-weight: 800;
+  padding-left: 45%;
+}
+
 /*-----------------------------------*/
 
 /*Dividindo a página em dois lados*/
 .left, .right {
 
+  padding-top: 50px;
   width: 50%;
   height: 100%;
   float: left;
@@ -108,7 +146,9 @@ body {
   height: auto;
   max-height: 600px;
 
-  padding-right: 10%;
+  padding-top: %;
+  padding-right: 15%;
+  padding-bottom: 5%;
 
   float: right;
   display: block;
