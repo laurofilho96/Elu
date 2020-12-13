@@ -92,7 +92,6 @@
       <img src="iphone-mask.png" alt="mascara" class="cel">
     </div>
 
-    <footer>
       <div class="menu">
         <ul>
           <li class="tablink" onclick="openOption(event, 'inicio')" id="defaultOpen"> <a href="#">Início</a></li>
@@ -102,7 +101,21 @@
           <li class="tablink" onclick="openOption(event, 'contato')"><a href="#">Contato</a></li>
         </ul>
       </div>
-    </footer>
+
+      <style>
+        a:hover{
+
+          color: #7000F1;
+        }
+
+        @media screen and (max-width:700px){
+
+          ul, li, a {
+
+            background-color: rgba(0, 0, 0, 0);
+          }
+        }
+      </style>
 
     <script>
 
@@ -129,7 +142,6 @@
         evt.currentTarget.className += " active";
         }
     </script>
-
 
   </body>
 </html>
