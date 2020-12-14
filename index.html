@@ -102,7 +102,7 @@
 
       <div class="menu">
         <ul>
-          <li class="tablink active" onclick="openOption(event, 'inicio')" id="defaultOpen"> <a href="#">Início</a></li>
+          <li class="tablink active1" onclick="openOption(event, 'inicio')" id="defaultOpen"> <a href="#">Início</a></li>
           <li class="tablink" onclick="openOption(event, 'oque')" ><a href="#">O que é o Elu</a></li>
           <li class="tablink" onclick="openOption(event, 'publico')"><a href="#">Pra quem é o Elu</a></li>
           <li class="tablink" onclick="openOption(event, 'nos')"><a href="#">Quem somos</a></li>
@@ -123,9 +123,18 @@
           }
         }
       </style>
-
+    
+    <div vw id="libras_container" class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
-
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script>
       document.getElementById("defaultOpen").click();
 
       function openOption(evt, tabName) {
@@ -141,12 +150,12 @@
         // Get all elements with class="tablinks" and remove the class "active"
         tablink = document.getElementsByClassName("tablink");
         for (i = 0; i < tablink.length; i++) {
-          tablink[i].className = tablink[i].className.replace(" active", "");
+          tablink[i].className = tablink[i].className.replace(" active1", "");
         }
 
         // Show the current tab, and add an "active" class to the button that opened the tab
         document.getElementById(tabName).style.display = "block";
-        evt.currentTarget.className += " active";
+        evt.currentTarget.className += " active1";
         }
     </script>
 

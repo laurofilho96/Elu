@@ -13,7 +13,25 @@ a:hover {
   color:#a557ff;
 }
 
-.active {
+#libras_container * {
+  background-color: #EDE3FC;;
+}
+
+#libras_container .active,
+#libras_container .active .access-button,
+#libras_container .active .pop-up {
+  background-color: transparent;
+}
+
+.vw-text-active {
+  color:#a557ff !important;
+}
+
+.vw-text {
+  color:#EDE3FC !important;
+}
+
+.active1 {
   font-weight: bolder;
   font-size: larger;
 }
